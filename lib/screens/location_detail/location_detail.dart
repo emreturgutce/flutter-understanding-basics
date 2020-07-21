@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/screens/location_detail/image_banner.dart';
 import 'package:hello_world/screens/location_detail/text_section.dart';
 
 class LocationDetail extends StatelessWidget {
@@ -12,9 +13,10 @@ class LocationDetail extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            TextSection(Colors.red),
-            TextSection(Colors.green),
-            TextSection(Colors.blue),
+            ImageBanner("assets/images/kiyomizu-dera.jpg"),
+            TextSection("summary", "one"),
+            TextSection("summary", "two"),
+            TextSection("summary", "three"),
           ],
         ));
   }
