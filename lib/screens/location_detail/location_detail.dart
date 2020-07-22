@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/models/location.dart';
 import 'package:hello_world/screens/location_detail/image_banner.dart';
 import 'package:hello_world/screens/location_detail/text_section.dart';
-import 'package:hello_world/models/location.dart';
 
 class LocationDetail extends StatelessWidget {
+  final int _locationID;
+
+  LocationDetail(this._locationID);
+
   @override
   Widget build(BuildContext context) {
-    final locations = Location.fetchAll();
-    final location = locations.first;
+    final location = Location.fetchByID(_locationID);
 
     return Scaffold(
         appBar: AppBar(
